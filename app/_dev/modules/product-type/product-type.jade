@@ -1,0 +1,10 @@
+block product-type
+	- var type = ['Флагманы','Бюджетные']
+	- var active = 0
+.product-type
+	ul.product-type__list
+		each item, index in type
+			if (index == active)
+				li.product-type__list.product-type__item_active=item
+			else
+				li.product-type__item=item

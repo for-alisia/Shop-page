@@ -1,0 +1,14 @@
+block brands
+	- var brand = ['Lenovo','Apple','Samsung','Asus','Motorola']
+	- var header = 'Бренды'
+.brand
+	h3.filter__header=header
+	form.brand__form
+		ul.brand__list
+			each item in brand
+				li.brand__item
+					input(type="checkbox").brand__item_input
+					label(for="#{item}").brand__item_label=item
+	.reset
+		span.reset__brand Сбросить фильтр
+

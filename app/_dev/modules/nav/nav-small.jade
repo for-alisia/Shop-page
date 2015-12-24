@@ -1,0 +1,6 @@
+- var nav = ['Планшеты','Мобильные телефоны','Mp3 Плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника']
+nav.navigation
+	ul.nav__list.nav__list_small
+		each item in nav
+			li.nav__item.nav__link_small
+					a(href="#").nav__link.nav__link_small=item

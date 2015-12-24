@@ -1,0 +1,12 @@
+- var nav = ['Планшеты','Мобильные телефоны','Mp3 Плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника']
+block active-nav
+	- var activeNav = 'Планшеты'
+nav.navigation
+	ul.nav__list
+		each item in nav
+			if item == activeNav
+				li.nav__item
+					a(href="#").nav__link.nav__link_active=item
+			else
+				li.nav__item
+					a(href="#").nav__link=item

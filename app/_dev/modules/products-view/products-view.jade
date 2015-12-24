@@ -1,0 +1,6 @@
+- var viewItem = ['large', 'medium', 'small']
+.view
+	h2.view__header Вид каталога
+	ul.view__list
+		each item in viewItem
+			li(class="view__item view__item_#{item}")

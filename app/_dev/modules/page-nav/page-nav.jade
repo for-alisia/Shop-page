@@ -1,0 +1,10 @@
+block qty-pages
+	-var qtyPages = {'pages': 5, 'active': 1}
+ul.page-nav__list
+	li.page-nav__item.page-nav__item_left &lsaquo;
+	- for (var i=1; i<=qtyPages.pages; i++)
+		if (i == qtyPages.active)
+			li.page-nav__item.page-nav__item_active=i
+		else
+			li.page-nav__item=i	
+	li.page-nav__item.page-nav__item_right &rsaquo;	

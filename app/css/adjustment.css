@@ -1,0 +1,11 @@
+ul {
+  list-style-type: none; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #ebedef; }

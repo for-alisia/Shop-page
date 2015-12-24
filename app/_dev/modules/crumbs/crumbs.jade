@@ -1,0 +1,7 @@
+block crumbs
+	- var crumbs = ['Главная']
+.crumbs
+	ul.crumbs__list
+		each item in crumbs
+			li.crumbs__item
+				a(href="#").crumbs__link=item

@@ -1,0 +1,25 @@
+extends ../cat-tpl.jade
+block title
+	title Мобильные телефоны
+block meta-description
+			meta(name="description", content="Купить мобильный телефон в Cooltech")
+block meta-keywords
+			meta(name="keywords", content="купить телефон, купить смартфон")
+block active-nav
+	- var activeNav = 'Мобильные телефоны'
+block crumbs
+	- var crumbs = ['Главная','Каталог']
+block topic-header
+	h1.topic__header Мобильные телефоны 
+block product-info
+	- var src = ['images/products/1.jpg','images/products/1.jpg','images/products/1.jpg']
+	- var desc = [{'option': 'SIM', 'val': 'microSIM'}, {'option':'Количество SIM','val': 2}, {'option':'Цвет','val':'белый'}, {'option':'ОС','val':'Android'}, {'option':'Связь 3G','val':'Есть'}, {'option':'4G (LTE)','val':'Нет'}, {'option':'GPS-модуль','val':'есть'}]
+	- var qty = 3
+	- var ratio = 4
+	- var price = '11 290'
+	- var qtyPhone = false
+block qty-pages
+	-var qtyPages = {'pages': 3, 'active': 1}
+block product-type
+	- var type = ['Флагманы','Бюджетные']
+	- var active = 1

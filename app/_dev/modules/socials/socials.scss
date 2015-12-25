@@ -1,0 +1,55 @@
+@import "../sprites/sprite";
+.socials {
+	float:left;
+}
+.socials__item {
+	display:inline-block;
+	position: relative;
+	width: 26px;
+	height: 26px;
+	background-color: #333333;
+	border-radius: 13px;
+	margin-left:12px;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.socials__link {
+	display: block;
+	text-indent: -9999px;
+	height: 100%;
+	width: 100%;
+	each $item in fb, vk, tw {
+
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left:50%;
+	}
+	&_fb:after {
+		@include sprite($fb);
+		margin-top: -($fb-height/2);
+		margin-left:-($fb-width/2);
+	}
+	&_fb:hover:after {
+		@include sprite($fb-hover);
+	}
+	&_vk:after {
+		@include sprite($vk);
+		margin-top: -($vk-height/2);
+		margin-left:-($vk-width/2);
+	}
+	&_vk:hover:after {
+		@include sprite($vk-hover);
+	}
+	&_tw:after {
+		@include sprite($tw);
+		margin-top: -($tw-height/2);
+		margin-left:-($tw-width/2);
+	}
+	&_tw:hover:after {
+		@include sprite($tw-hover);
+	}
+}

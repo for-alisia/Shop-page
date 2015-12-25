@@ -1,0 +1,43 @@
+ .navigation {
+		max-width: $mainWidth;
+		margin: 0 auto;
+		padding: 0 6px;
+	}
+.nav__list{
+	font-size: 0;
+}
+.nav__item {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 54px;
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: #e4e2e2;
+	}
+	&.nav__item_active {
+		background-color: $orange;
+		& .nav__link {
+			color: #fff;
+		}
+	}
+
+}
+.nav__link {
+	color: $fontColor;
+	display: block;
+}
+.nav__list.nav__list_small {
+
+}
+.nav__item.nav__item_small {
+	line-height: 35px;
+	background-color: none;
+
+}
+.nav__link.nav__linl_small {
+	display: inline;
+	color: #fff;
+	font-size: 14px;
+}

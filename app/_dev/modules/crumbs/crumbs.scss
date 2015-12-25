@@ -1,0 +1,28 @@
+.crumbs {
+	display:inline-block;
+	&__list {
+
+	}
+	&__item {
+		display: inline-block;
+		&:after {
+			content: '>';
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&:last-child:after {
+			content:'';
+			display: none;
+		}
+
+	}
+	&__link {
+		color: $fontColor;
+		font-size: 14px;
+		padding-right: 2px;
+		&:hover {
+			color: $orange;
+			text-decoration: underline;
+		}
+	}
+}

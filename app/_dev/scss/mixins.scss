@@ -1,0 +1,65 @@
+$orange: #ff6705;
+$fontColor: #333333;
+$mainWidth: 1099px;
+
+@mixin pseudo-icon {
+	content:'';
+	display: inline-block;
+}
+
+@mixin clearfix {
+  display: block;
+  &:after {
+    content: '';
+    display: table;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@mixin text-hide {
+	font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+}
+@mixin placeholder-hide {
+	:focus::-webkit-input-placeholder {
+	color: transparent;
+	transition: all 0.2s ease; 
+}
+:focus::-moz-placeholder {
+	color: transparent;
+	transition: all 0.2s ease; 
+}
+:focus:-moz-placeholder {
+	color: transparent;
+	transition: all 0.2s ease; 
+}
+:focus:-ms-input-placeholder {
+	color: transparent;
+	transition: all 0.2s ease; 
+}
+}
+@mixin placeholder {
+	::-webkit-input-placeholder {
+	color:#7f7f7f;
+	font-family:'OpenSansLight';
+	font-size: 14px;
+}
+::-moz-placeholder {
+	color:#7f7f7f;
+	font-family:'OpenSansLight';
+	font-size: 14px;
+}
+:-moz-placeholder {
+	color:#7f7f7f;
+	font-family:'OpenSansLight';
+	font-size: 14px;
+}
+:-ms-input-placeholder {
+	color:#7f7f7f;
+	font-family:'OpenSansLight';
+	font-size: 14px;
+}
+}

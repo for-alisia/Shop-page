@@ -2,7 +2,8 @@ var gulp = require("gulp"),
     browserSync = require('browser-sync'),
     jade = require('gulp-jade'),
     plumber = require('gulp-plumber'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    spritesmith = require('gulp.spritesmith');
 
 //Pathes for tasks
 var path = {
@@ -10,8 +11,22 @@ var path = {
     jadeDir:'.app/_dev/**/*.jade',
     baseDir: './app',
     sass:'./app/_dev/scss/**/*.scss',
-    sassDest:'./app/css'
+    sassDest:'./app/css',
+    sprite: './app/images/icons/*.png',
+    spriteDest: './app/_dev/sprites/'
 };
+
+//Sprite generate
+gulp.task('sprite', function () {
+  var spriteData = gulp.src(path.sprite).pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.scss',
+    padding: 70,
+    cssFormat: 'scss',
+    imgPath: '../_dev/sprites/sprite.png'
+  }));
+  return spriteData.pipe(gulp.dest(path.spriteDest));
+});
 
 //Jade task from app/markups/pages to app
 gulp.task('jade', function() {

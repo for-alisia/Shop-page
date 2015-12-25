@@ -1,0 +1,23 @@
+.user-data {
+	display: inline-block;
+	&__list {
+		font-size: 16px;
+		font-family: 'OpenSansSemibold';
+	}
+	&__item {
+		display: inline-block;
+		margin-left: 29px;
+	}
+	&__item:first-child {
+		margin-left: 0;
+	}
+	&__link {
+		display: block;
+		color: $fontColor;
+		text-decoration: underline;
+	}
+	&__link:hover {
+		color: #ff6d1d;
+		transition: all 0.2s ease;
+	}
+}

@@ -1,0 +1,8 @@
+@import "mixins.scss";
+@import "../modules/socials/socials.scss";
+@import "../modules/logo/logo.scss";
+@import "../modules/nav/nav.scss";
+.footer-wrapper {
+	max-width: $mainWidth;
+	margin: 0 auto;
+}

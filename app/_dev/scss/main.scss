@@ -1,0 +1,8 @@
+
+@import "adjustment.scss";
+@import "header.scss";
+@import "footer.scss";
+.main-wrapper, .info-wrapper {
+	max-width: $mainWidth;
+	margin: 0 auto;
+}

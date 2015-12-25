@@ -1,0 +1,64 @@
+@import "../modules/socials/socials.scss";
+@import "mixins.scss";
+@import "../modules/contacts/contacts.scss";
+@import "../modules/logo/logo.scss";
+@import "../modules/search/search.scss";
+@import "../modules/user-data/user-data.scss";
+@import "../modules/nav/nav.scss";
+@import "../modules/crumbs/crumbs.scss";
+
+.header-contacts {
+	background-color: #fff;
+	border-bottom: #ebedef 2px solid;
+}
+.header-inner {
+	@include clearfix;
+	padding: 26px 0;
+	max-width: $mainWidth;
+	margin: 0 auto;
+}
+.header-info {
+	max-width: $mainWidth;
+	margin: 0 auto;
+	padding: 28px 0;
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		width: 0;
+		vertical-align: middle;
+	}
+	& .search {
+		vertical-align: middle;
+		margin-left: 53px;
+		margin-top: 2px;
+	}
+	& .logo {
+		float: left;
+	}
+	& .user-data {
+		float: right;
+		margin-top: 8px;
+	}
+}
+.nav-wrapper {
+	background-color: #fff;
+	border-bottom: #ebedef solid 2px;
+	margin-bottom: 25px;
+}
+.crumbs-wrapper {
+	margin: 0 auto;
+	max-width: $mainWidth + 5;
+	margin-bottom: 17px;
+}
+.topic-wrapper {
+	margin: 0 auto;
+	max-width: $mainWidth + 6;
+	margin-bottom: 30px;
+}
+.topic__header {
+	font-size: 20px;
+	font-family: 'OpenSansBold';
+	margin: 0;
+
+}

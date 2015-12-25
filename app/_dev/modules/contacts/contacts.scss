@@ -1,0 +1,40 @@
+.contacts {
+	float: right;
+	max-width: 950px;
+}
+.contacts__list {
+	line-height: 24px;
+	letter-spacing: 0px;
+
+}
+.contacts__item {
+	display: inline-block;
+	margin-left: 83px;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:before {
+		content:'';
+		display: inline-block;
+		vertical-align: bottom;
+		margin-right:10px;
+		margin-bottom: 4px;
+	}
+}
+.contacts__adress {
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	&:before{
+		@include sprite($map-pin);
+	}
+
+}
+.contacts__phone {
+	font-family:'OpenSansSemibold';
+	font-size: 18px;
+	display: inline-block;
+	
+	&:before{
+		@include sprite($telephone);
+	}
+}

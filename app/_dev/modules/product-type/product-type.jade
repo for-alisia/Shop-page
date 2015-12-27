@@ -1,10 +1,12 @@
 block product-type
-	- var type = ['Флагманы','Бюджетные']
+	- var type = ['Флагманы','Бюджетная линейка']
 	- var active = 0
 .product-type
 	ul.product-type__list
 		each item, index in type
 			if (index == active)
-				li.product-type__list.product-type__item_active=item
+				li.product-type__item.product-type__item_active
+					a(href="#").product-type__link.product-type__link_active=item
 			else
-				li.product-type__item=item
+				li.product-type__item
+					a(href="#").product-type__link=item

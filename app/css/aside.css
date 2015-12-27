@@ -1,0 +1,246 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.product-type__list {
+  font-size: 14px; }
+
+.product-type__item {
+  border: 1px solid #dee1e4;
+  background-color: #fbfbfb;
+  padding: 12px 27px; }
+  .product-type__item:first-child {
+    border-radius: 4px 4px 0 0; }
+  .product-type__item:last-child {
+    border-radius: 0 0 4px 4px; }
+  .product-type__item.product-type__item_active {
+    background-color: #d9e5ea; }
+
+.product-type__link {
+  display: block;
+  color: #7f7f7f;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .product-type__link:hover {
+    color: #595959; }
+  .product-type__link.product-type__link_active {
+    color: #5d656c; }
+
+.product-type {
+  margin-bottom: 40px; }
+
+.color__list {
+  margin-top: -20px; }
+
+.color__item {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  background-color: #fff;
+  border: 1px solid #dee1e4;
+  margin-right: 19px;
+  margin-top: 17px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .color__item:hover {
+    border: 2px solid #ff6600; }
+
+.pseudo__element {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border-radius: 10px;
+  border: 3px solid #dee1e4;
+  cursor: pointer;
+  position: relative; }
+  .pseudo__element:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+    background-color: #f60;
+    position: absolute;
+    top: center;
+    laft: center;
+    margin-left: 2px;
+    margin-top: 2px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease; }
+
+.pseudo__text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  margin-left: 8px; }
+
+.exist__radio {
+  position: absolute;
+  left: -9990px; }
+  .exist__radio:checked + .pseudo__element {
+    border: 3px solid #ff6600; }
+    .exist__radio:checked + .pseudo__element:after {
+      height: 9px;
+      width: 9px;
+      opacity: 1; }
+
+.exist__label {
+  position: relative; }
+
+.radio-wrapper {
+  margin-bottom: 13px; }
+  .radio-wrapper:last-child {
+    margin-bottom: 0; }
+
+.brand__item_input {
+  position: absolute;
+  left: -9999px; }
+  .brand__item_input:checked + .brand__element {
+    background-color: #f60; }
+    .brand__item_input:checked + .brand__element:after {
+      opacity: 1; }
+    .brand__item_input:checked + .brand__element:hover:after {
+      background-image: url(../_dev/sprites/sprite.png);
+      background-position: -257px -272px;
+      width: 13px;
+      height: 10px; }
+
+.brand__element {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: #dee1e4;
+  border-radius: 4px;
+  cursor: pointer; }
+  .brand__element:after {
+    display: block;
+    content: '';
+    background-image: url(../_dev/sprites/sprite.png);
+    background-position: -257px -272px;
+    width: 13px;
+    height: 10px;
+    margin-top: 4px;
+    margin-left: 3px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease; }
+  .brand__element:hover:after {
+    background-image: url(../_dev/sprites/sprite.png);
+    background-position: -174px -272px;
+    width: 13px;
+    height: 10px;
+    opacity: 1; }
+
+.brand__text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  margin-left: 7px; }
+
+.brand__item {
+  margin-bottom: 12px; }
+  .brand__item:last-child {
+    margin-bottom: 0; }
+
+.reset__brand {
+  text-decoration: underline;
+  font-size: 14px; }
+  .reset__brand_link {
+    color: #5db2fc; }
+
+.brand__list {
+  margin-bottom: 10px; }
+
+.reset {
+  margin-bottom: 3px; }
+
+.price__label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 42px; }
+  .price__label:first-child {
+    margin-left: 0; }
+
+.price__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 82px;
+  border: #dee1e4 1px solid;
+  outline: none;
+  line-height: 27px;
+  padding: 0 10px;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(148, 148, 148, 0.43);
+  margin-left: 12px;
+  font-size: 14px; }
+
+.filters__list {
+  background-color: #fbfbfb;
+  border: 1px solid #dee1e4;
+  border-radius: 4px; }
+
+.filters__item {
+  border-bottom: 1px solid #dee1e4;
+  padding-left: 28px;
+  padding-right: 21px;
+  padding-top: 12px;
+  padding-bottom: 14px; }
+  .filters__item:last-child {
+    border-bottom: none; }
+
+.filter__header {
+  font-size: 16px;
+  font-family: 'OpenSansSemibold';
+  margin: 0;
+  margin-bottom: 16px; }
+  .filter__header_link {
+    display: block;
+    color: #333333;
+    position: relative; }
+    .filter__header_link:after {
+      display: block;
+      content: '';
+      position: absolute;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+      top: 9px;
+      right: -9px;
+      background-image: url(../_dev/sprites/sprite.png);
+      background-position: -86px -272px;
+      width: 18px;
+      height: 11px;
+      opacity: 0; }
+    .filter__header_link:hover:after {
+      opacity: 1; }
+    .filter__header_link.active_link:after {
+      background-image: url(../_dev/sprites/sprite.png);
+      background-position: -340px -272px;
+      width: 13px;
+      height: 9px; }

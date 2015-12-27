@@ -1,0 +1,19 @@
+@import "mixins.scss";
+
+
+.sort-wrapper {
+	padding-left: 19px;
+	padding-right: 2px;
+	border-radius: 4px;
+	background-color: #dde7ec;
+	border: 1px solid #dee1e4;
+	margin-bottom: 20px;
+	@include clearfix;
+}
+.pages-wrapper {
+	text-align: right;
+}
+.products {
+	margin-left: -18px;
+	margin-bottom: 60px;
+}

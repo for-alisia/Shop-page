@@ -1,0 +1,52 @@
+@import "mixins.scss";
+@import "../sprites/sprite.scss";
+@import "../modules/product-type/product-type.scss";
+@import "../modules/filter-color/filter-color.scss";
+@import "../modules/filter-exist/filter-exist.scss";
+@import "../modules/filter-brand/filter-brand.scss";
+@import "../modules/filter-price/filter-price.scss";
+
+.filters__list {
+	background-color: #fbfbfb;
+	border: 1px solid #dee1e4;
+	border-radius: 4px; 
+}
+.filters__item {
+	border-bottom: 1px solid #dee1e4;
+	padding-left: 28px;
+	padding-right: 21px;
+	padding-top: 12px;
+	padding-bottom: 14px;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.filter__header {
+	font-size: 16px;
+	font-family: 'OpenSansSemibold';
+	margin: 0;
+	margin-bottom: 16px;
+	&_link {
+		display: block;
+		color: #333333;
+		position: relative;
+		&:after {
+			display: block;
+			content:'';
+			position: absolute;
+			transition: opacity 0.3s ease;
+			top: 9px;
+			right: -9px;
+			@include sprite($arrow-up);
+			opacity:0;
+		}
+		&:hover:after {
+			opacity: 1;
+		}
+		&.active_link {
+			&:after {
+				@include sprite($arrow-down);
+			}
+		}
+	}
+}

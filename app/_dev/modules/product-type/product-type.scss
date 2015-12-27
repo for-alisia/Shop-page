@@ -1,0 +1,31 @@
+.product-type__list {
+	font-size: 14px;
+}
+.product-type__item {
+	border: 1px solid #dee1e4;
+	background-color: $bgColor;
+	padding: 12px 27px;
+	&:first-child {
+		border-radius: 4px 4px 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 4px 4px;
+	}
+	&.product-type__item_active {
+		background-color: #d9e5ea;
+	}
+}
+.product-type__link {
+	display: block;
+	color: #7f7f7f;
+	transition: all 0.2s ease;
+	&:hover {
+		color: darken(#7f7f7f, 15%);
+	}
+	&.product-type__link_active {
+		color: #5d656c;
+	}
+}
+.product-type {
+	margin-bottom: 40px;
+}

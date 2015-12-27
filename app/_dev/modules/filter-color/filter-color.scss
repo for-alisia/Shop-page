@@ -1,0 +1,21 @@
+.color {
+	&__list {
+		margin-top: -20px;
+	}
+	&__item
+	{
+		display: inline-block;
+		width: 37px;
+		height: 37px;
+		background-color: #fff;
+		border: 1px solid #dee1e4;
+		margin-right: 19px;
+		margin-top: 17px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		&:hover {
+			border: 2px solid #ff6600;
+		}
+	}
+	
+}

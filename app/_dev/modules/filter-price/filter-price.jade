@@ -1,9 +1,10 @@
 .price
-	h3.filter__header Цена
+	h3.filter__header
+		a(href="#").filter__header_link Цена
 	form.price__form
 		.price-wrapper
-			label(for="from").price__label От
-				input(type="text" name="from").price__input
-			label(for="to").price__label До
-				input(type="text" name="to").price__input
+			label(for="from").price__label от
+			input(type="text" name="from" id="from").price__input
+			label(for="to").price__label до
+			input(type="text" name="to" id="to").price__input
 		.slider

@@ -1,6 +1,11 @@
-- var viewItem = ['large', 'medium', 'small']
+- var viewItem = ['medium', 'large', 'small']
 .view
 	h2.view__header Вид каталога
 	ul.view__list
 		each item in viewItem
-			li(class="view__item view__item_#{item}")
+			if item == 'medium'
+				li(class="view__item view__item_#{item} view__item_active")
+					a(class="view__link view__link_#{item} view__link_active")
+			else
+				li(class="view__item view__item_#{item}")
+					a(class="view__link view__link_#{item}")

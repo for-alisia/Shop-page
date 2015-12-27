@@ -1,0 +1,50 @@
+.view {
+	height: 50px;
+	display: inline-block;
+	float: right;
+
+	&__header {
+		margin: 0;
+		color: #5d656c;
+		font-size: 14px;
+		display: inline-block;
+		font-weight: normal;
+	}
+	&__list {
+		display: inline-block;
+		font-size: 0;
+		margin-left: 15px;
+}
+	&__item {
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		padding: 17px;
+		border-left: 1px solid #dee1e4, 20%;
+		&:last-child {
+		}
+		
+	}
+	&__link {
+		display: inline-block;
+		&.view__link_medium {
+			@include sprite($view-medium)
+			&.view__link_active {
+				@include sprite($view-medium-active)
+			}
+		}
+		&.view__link_large {
+			@include sprite($view-large)
+			&.view__link_active {
+				@include sprite($view-large-active)
+			}
+		}
+		&.view__link_small {
+			@include sprite($view-small)
+			&.view__link_active {
+				@include sprite($view-small-active)
+			}
+		}
+	}
+}

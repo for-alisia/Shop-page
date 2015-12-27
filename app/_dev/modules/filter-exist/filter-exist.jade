@@ -1,10 +1,16 @@
 .exist
-	h3.filter__header Наличие в магазинах
-	form.exist__form
-		.radio-wrapper
-			input(type="radio", name="all", checked).exist__radio 
-			label(for="all").exist__label Во всех магазинах
-		.radio-wrapper
-			input(type="radio", name="closest").exist__radio
-			label(for="closest") В ближайшем ко мне магазине
+	h3.filter__header 
+		a(href="#").filter__header_link Наличие в магазинах
+	ul.exist__form
+		li.radio-wrapper
+			label(for="all").exist__label 
+				input(type="radio", name="location", id="all", checked).exist__radio
+				.pseudo__element
+				.pseudo__text Во всех магазинах
+			
+		li.radio-wrapper
+			label(for="closest").exist__label 
+				input(type="radio", name="location", id="closest").exist__radio
+				.pseudo__element
+				.pseudo__text В ближайшем ко мне магазине
 

@@ -3,7 +3,9 @@ var gulp = require("gulp"),
     jade = require('gulp-jade'),
     plumber = require('gulp-plumber'),
     sass = require('gulp-sass'),
-    spritesmith = require('gulp.spritesmith');
+    spritesmith = require('gulp.spritesmith'),
+    postcss = require('gulp-postcss'),
+    rucksack = require('rucksack-css');
 
 //Pathes for tasks
 var path = {
@@ -15,6 +17,11 @@ var path = {
     sprite: './app/images/icons/*.png',
     spriteDest: './app/_dev/sprites/'
 };
+var processors = [
+    rucksack({
+            autoprefixer: true
+        })
+]
 
 //Sprite generate
 gulp.task('sprite', function () {
@@ -44,6 +51,7 @@ gulp.task('jade', function() {
 gulp.task('sass', function () {
   gulp.src(path.sass)
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(processors))
     .pipe(gulp.dest(path.sassDest));
 });
 

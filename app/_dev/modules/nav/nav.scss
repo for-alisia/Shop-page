@@ -28,16 +28,30 @@
 	color: $fontColor;
 	display: block;
 }
-.nav__list.nav__list_small {
 
+//top menu styles
+.navigation-small {
+}
+.nav__list.nav__list_small {
+	text-align: right;
 }
 .nav__item.nav__item_small {
 	line-height: 35px;
-	background-color: none;
+	background-color: transparent;
+	margin-left: 25px;
+	padding: 0;
+	&:hover {
+		background-color: transparent;
+	}
 
 }
-.nav__link.nav__linl_small {
+.nav__link.nav__link_small {
 	display: inline;
 	color: #fff;
 	font-size: 14px;
+	text-decoration: underline;
+	transition: all 0.2s ease;
+	&:hover {
+		color: $orange;
+	}
 }

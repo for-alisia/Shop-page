@@ -12,14 +12,17 @@ block crumbs
 block topic-header
 	h1.topic__header Мобильные телефоны 
 block product-info
+	- var largeSrc = 'images/products/1.jpg'
 	- var src = ['images/products/1.jpg','images/products/1.jpg','images/products/1.jpg']
 	- var desc = [{'option': 'SIM', 'val': 'microSIM'}, {'option':'Количество SIM','val': 2}, {'option':'Цвет','val':'белый'}, {'option':'ОС','val':'Android'}, {'option':'Связь 3G','val':'Есть'}, {'option':'4G (LTE)','val':'Нет'}, {'option':'GPS-модуль','val':'есть'}]
-	- var qty = 3
+	- var fullDesc = 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц'
+	- var qty = 6
 	- var ratio = 4
 	- var price = '11 290'
-	- var qtyPhone = false
+	- var qtyPhone = true
+	- var plu = 189238
 block qty-pages
 	-var qtyPages = {'pages': 3, 'active': 1}
 block product-type
-	- var type = ['Флагманы','Бюджетные']
+	- var type = ['Флагманы','Бюджетная линейка']
 	- var active = 1

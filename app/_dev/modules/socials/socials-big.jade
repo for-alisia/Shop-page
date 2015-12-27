@@ -1,6 +1,6 @@
-- var socials = ['Facebook','VK','Twitter']
-.socials
-	ul.socials__list
+- var socials = ['fb','vk','tw']
+.socials_big
+	ul.socials__list_big
 		each item in socials
-			li(class="socials__list socials__list_big")
+			li(class="socials__item socials__item_big")
 				a(href="#" class="socials__link socials__link_big socials__link_#{item}")=item

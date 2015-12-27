@@ -19,9 +19,6 @@
 	text-indent: -9999px;
 	height: 100%;
 	width: 100%;
-	each $item in fb, vk, tw {
-
-	}
 	&:after {
 		content: '';
 		position: absolute;
@@ -51,5 +48,52 @@
 	}
 	&_tw:hover:after {
 		@include sprite($tw-hover);
+	}
+}
+.socials_big {
+	display: inline-block;
+	margin-bottom: 21px;
+}
+.socials__item.socials__item_big {
+	width: 44px;
+	height: 44px;
+	background-color: #fff;
+	border-radius: 22px;
+	margin-left: 22px;
+	text-align: left;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.socials__link.socials__link_big {
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left:50%;
+	}
+	&.socials__link_fb:after {
+		@include sprite($fb-big);
+		margin-top: -($fb-big-height/2);
+		margin-left:-($fb-big-width/2);
+	}
+	&.socials__link_fb:hover:after {
+		@include sprite($fb-big-hover);
+	}
+	&.socials__link_vk:after {
+		@include sprite($vk-big);
+		margin-top: -($vk-big-height/2);
+		margin-left:-($vk-big-width/2);
+	}
+	&.socials__link_vk:hover:after {
+		@include sprite($vk-big-hover);
+	}
+	&.socials__link_tw:after {
+		@include sprite($tw-big);
+		margin-top: -($tw-big-height/2);
+		margin-left:-($tw-big-width/2);
+	}
+	&.socials__link_tw:hover:after {
+		@include sprite($tw-big-hover);
 	}
 }

@@ -1,8 +1,23 @@
 @import "mixins.scss";
-@import "../modules/socials/socials.scss";
-@import "../modules/logo/logo.scss";
-@import "../modules/nav/nav.scss";
+@import "../modules/copyright/copyright.scss";
 .footer-wrapper {
-	max-width: $mainWidth;
+	max-width: $mainWidth - 5;
 	margin: 0 auto;
+	padding-top: 34px;
+	margin-bottom: 22px;
+}
+.footer-container {
+	@include clearfix;
+}
+.logo-wrapper {
+	float: left;
+	margin-top: 37px;
+}
+.menu-wrapper {
+	max-width: 553px;
+	float: right;
+	text-align: right;
+}
+.copyright {
+	border-top: 2px solid #494949;
 }

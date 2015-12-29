@@ -1,4 +1,3 @@
-@import "../sprites/sprite";
 .socials {
 	float:left;
 }
@@ -22,32 +21,37 @@
 	&:after {
 		content: '';
 		position: absolute;
-		top: 50%;
-		left:50%;
+		top: 0;
+		left:0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
 	}
 	&_fb:after {
 		@include sprite($fb);
-		margin-top: -($fb-height/2);
-		margin-left:-($fb-width/2);
+		height: $fb-height + 1;
+		width: $fb-width +1;
 	}
 	&_fb:hover:after {
 		@include sprite($fb-hover);
+		height: $fb-hover-height + 1;
+		width: $fb-hover-width +1;
 	}
 	&_vk:after {
 		@include sprite($vk);
-		margin-top: -($vk-height/2);
-		margin-left:-($vk-width/2);
+		height: $vk-height + 1;
 	}
 	&_vk:hover:after {
 		@include sprite($vk-hover);
+		height: $vk-hover-height + 1;
 	}
 	&_tw:after {
 		@include sprite($tw);
-		margin-top: -($tw-height/2);
-		margin-left:-($tw-width/2);
+		height: $tw-height + 1;
 	}
 	&_tw:hover:after {
 		@include sprite($tw-hover);
+		height: $tw-hover-height + 1;
 	}
 }
 .socials_big {

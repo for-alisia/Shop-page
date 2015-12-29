@@ -10,12 +10,14 @@ var gulp = require("gulp"),
 //Pathes for tasks
 var path = {
     jadePath: './app/_dev/pages/*.jade',
+    jadeAll: './app/_dev/**/*.jade',
     jadeDir:'.app/_dev/**/*.jade',
     baseDir: './app',
-    sass:'./app/_dev/scss/**/*.scss',
+    sass:'./app/_dev/scss/main.scss',
+    sassAll: './app/_dev/scss/**/*.scss',
     sassDest:'./app/css',
     sprite: './app/images/icons/*.png',
-    spriteDest: './app/_dev/sprites/'
+    spriteDest: './app/_dev/scss/'
 };
 var processors = [
     rucksack({
@@ -30,12 +32,12 @@ gulp.task('sprite', function () {
     cssName: 'sprite.scss',
     padding: 70,
     cssFormat: 'scss',
-    imgPath: '../_dev/sprites/sprite.png'
+    imgPath: '../images/sprite/sprite.png'
   }));
   return spriteData.pipe(gulp.dest(path.spriteDest));
 });
 
-//Jade task from app/markups/pages to app
+//Jade task 
 gulp.task('jade', function() {
     var YOUR_LOCALS = {};
     gulp.src(path.jadePath)
@@ -77,10 +79,10 @@ gulp.task('watch',function(){
    
 });
 
-//watch task for jade
+//watch task for jade and sass
 gulp.task('fileWatch', function() {
-    gulp.watch(path.jadePath, ['jade']);
-    gulp.watch(path.sass, ['sass']);
+    gulp.watch(path.jadeAll, ['jade']);
+    gulp.watch(path.sassAll, ['sass']);
 });
 
 //default task

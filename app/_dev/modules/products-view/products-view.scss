@@ -29,21 +29,27 @@
 	&__link {
 		display: inline-block;
 		&.view__link_medium {
-			@include sprite($view-medium)
-			&.view__link_active {
-				@include sprite($view-medium-active)
+			@include sprite($view-medium);
+			width: $view-medium-width + 1;
+			&.view__link_active, &:hover {
+				@include sprite($view-medium-active);
+				width: $view-medium-active-width + 1;
 			}
 		}
 		&.view__link_large {
-			@include sprite($view-large)
-			&.view__link_active {
-				@include sprite($view-large-active)
+			@include sprite($view-large);
+			width: $view-large-width + 1;
+			&.view__link_active, &:hover {
+				@include sprite($view-large-active);
+				width: $view-large-active-width + 1;
 			}
 		}
 		&.view__link_small {
-			@include sprite($view-small)
-			&.view__link_active {
-				@include sprite($view-small-active)
+			@include sprite($view-small);
+			width: $view-small-width +1;
+			&.view__link_active, &:hover {
+				@include sprite($view-small-active);
+				width: $view-small-active-width +1;
 			}
 		}
 	}

@@ -20,8 +20,11 @@
 		color: $fontColor;
 		font-size: 14px;
 		padding-right: 2px;
-		&:hover {
+		&.crumbs_active {
 			color: $orange;
+			text-decoration: underline;
+		}
+		&:hover {
 			text-decoration: underline;
 		}
 	}

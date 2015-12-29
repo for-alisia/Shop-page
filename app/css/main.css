@@ -155,36 +155,6 @@ body {
   font-family: 'OpenSansLight';
   font-size: 14px; }
 
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-*/
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
 .socials {
   float: left; }
 
@@ -207,44 +177,49 @@ The `sprites` mixin generates identical output to the CSS template
   .socials__link:after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%; }
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; }
   .socials__link_fb:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -362px -91px;
     width: 6px;
     height: 12px;
-    margin-top: -6px;
-    margin-left: -3px; }
+    height: 13px;
+    width: 7px; }
   .socials__link_fb:hover:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -362px -173px;
     width: 6px;
-    height: 12px; }
+    height: 12px;
+    height: 13px;
+    width: 7px; }
   .socials__link_vk:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -443px -172px;
     width: 10px;
     height: 12px;
-    margin-top: -6px;
-    margin-left: -5px; }
+    height: 13px; }
   .socials__link_vk:hover:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -443px -254px;
     width: 10px;
-    height: 12px; }
+    height: 12px;
+    height: 13px; }
   .socials__link_tw:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -86px -357px;
     width: 16px;
     height: 12px;
-    margin-top: -6px;
-    margin-left: -8px; }
+    height: 13px; }
   .socials__link_tw:hover:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: 0px -357px;
     width: 16px;
-    height: 12px; }
+    height: 12px;
+    height: 13px; }
 
 .socials_big {
   display: inline-block;
@@ -267,7 +242,7 @@ The `sprites` mixin generates identical output to the CSS template
   left: 50%; }
 
 .socials__link.socials__link_big.socials__link_fb:after {
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: -276px -172px;
   width: 11px;
   height: 21px;
@@ -275,13 +250,13 @@ The `sprites` mixin generates identical output to the CSS template
   margin-left: -5.5px; }
 
 .socials__link.socials__link_big.socials__link_fb:hover:after {
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: -362px 0px;
   width: 11px;
   height: 21px; }
 
 .socials__link.socials__link_big.socials__link_vk:after {
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: -190px 0px;
   width: 16px;
   height: 21px;
@@ -289,13 +264,13 @@ The `sprites` mixin generates identical output to the CSS template
   margin-left: -8px; }
 
 .socials__link.socials__link_big.socials__link_vk:hover:after {
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: 0px -181px;
   width: 16px;
   height: 21px; }
 
 .socials__link.socials__link_big.socials__link_tw:after {
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: -95px 0px;
   width: 25px;
   height: 21px;
@@ -303,7 +278,7 @@ The `sprites` mixin generates identical output to the CSS template
   margin-left: -12.5px; }
 
 .socials__link.socials__link_big.socials__link_tw:hover:after {
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: 0px 0px;
   width: 25px;
   height: 21px; }
@@ -332,7 +307,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'OpenSansRegular';
   font-size: 14px; }
   .contacts__adress:before {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -443px 0px;
     width: 12px;
     height: 16px; }
@@ -342,10 +317,13 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 18px;
   display: inline-block; }
   .contacts__phone:before {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -443px -86px;
     width: 12px;
     height: 16px; }
+
+.phone__link {
+  color: #333333; }
 
 .logo__link {
   display: block;
@@ -411,7 +389,11 @@ The `sprites` mixin generates identical output to the CSS template
 .navigation {
   max-width: 1099px;
   margin: 0 auto;
-  padding: 0 6px; }
+  padding: 0 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 54px; }
 
 .nav__list {
   font-size: 0; }
@@ -471,8 +453,10 @@ The `sprites` mixin generates identical output to the CSS template
     color: #333333;
     font-size: 14px;
     padding-right: 2px; }
-    .crumbs__link:hover {
+    .crumbs__link.crumbs_active {
       color: #ff6705;
+      text-decoration: underline; }
+    .crumbs__link:hover {
       text-decoration: underline; }
 
 .header-contacts {
@@ -529,6 +513,7 @@ The `sprites` mixin generates identical output to the CSS template
 .topic__header {
   font-size: 20px;
   font-family: 'OpenSansBold';
+  font-weight: normal;
   margin: 0; }
 
 .copyright__content {
@@ -601,8 +586,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .product-type__item {
   border: 1px solid #dee1e4;
-  background-color: #fbfbfb;
-  padding: 12px 27px; }
+  background-color: #fbfbfb; }
   .product-type__item:first-child {
     border-radius: 4px 4px 0 0; }
   .product-type__item:last-child {
@@ -613,6 +597,7 @@ The `sprites` mixin generates identical output to the CSS template
 .product-type__link {
   display: block;
   color: #7f7f7f;
+  padding: 12px 27px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   .product-type__link:hover {
@@ -637,7 +622,7 @@ The `sprites` mixin generates identical output to the CSS template
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-  .color__item:hover {
+  .color__item:hover, .color__item.active__color {
     border: 2px solid #ff6600; }
 
 .pseudo__element {
@@ -650,15 +635,16 @@ The `sprites` mixin generates identical output to the CSS template
   position: relative; }
   .pseudo__element:after {
     content: '';
-    height: 0;
-    width: 0;
+    height: 9px;
+    width: 9px;
     border-radius: 5px;
     background-color: #f60;
     position: absolute;
-    top: center;
-    laft: center;
-    margin-left: 2px;
-    margin-top: 2px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
     opacity: 0;
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease; }
@@ -675,8 +661,6 @@ The `sprites` mixin generates identical output to the CSS template
   .exist__radio:checked + .pseudo__element {
     border: 3px solid #ff6600; }
     .exist__radio:checked + .pseudo__element:after {
-      height: 9px;
-      width: 9px;
       opacity: 1; }
 
 .exist__label {
@@ -695,7 +679,7 @@ The `sprites` mixin generates identical output to the CSS template
     .brand__item_input:checked + .brand__element:after {
       opacity: 1; }
     .brand__item_input:checked + .brand__element:hover:after {
-      background-image: url(../_dev/sprites/sprite.png);
+      background-image: url(../images/sprite/sprite.png);
       background-position: -257px -272px;
       width: 13px;
       height: 10px; }
@@ -710,7 +694,7 @@ The `sprites` mixin generates identical output to the CSS template
   .brand__element:after {
     display: block;
     content: '';
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -257px -272px;
     width: 13px;
     height: 10px;
@@ -720,7 +704,7 @@ The `sprites` mixin generates identical output to the CSS template
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease; }
   .brand__element:hover:after {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: -174px -272px;
     width: 13px;
     height: 10px;
@@ -738,10 +722,10 @@ The `sprites` mixin generates identical output to the CSS template
     margin-bottom: 0; }
 
 .reset__brand {
-  text-decoration: underline;
   font-size: 14px; }
   .reset__brand_link {
-    color: #5db2fc; }
+    color: #5db2fc;
+    text-decoration: underline; }
 
 .brand__list {
   margin-bottom: 10px; }
@@ -778,7 +762,6 @@ The `sprites` mixin generates identical output to the CSS template
   border-bottom: 1px solid #dee1e4;
   padding-left: 28px;
   padding-right: 21px;
-  padding-top: 12px;
   padding-bottom: 14px; }
   .filters__item:last-child {
     border-bottom: none; }
@@ -786,21 +769,23 @@ The `sprites` mixin generates identical output to the CSS template
 .filter__header {
   font-size: 16px;
   font-family: 'OpenSansSemibold';
+  font-weight: normal;
   margin: 0;
   margin-bottom: 16px; }
   .filter__header_link {
     display: block;
     color: #333333;
-    position: relative; }
+    position: relative;
+    padding-top: 12px; }
     .filter__header_link:after {
       display: block;
       content: '';
       position: absolute;
       -webkit-transition: opacity 0.3s ease;
       transition: opacity 0.3s ease;
-      top: 9px;
+      top: 17px;
       right: -9px;
-      background-image: url(../_dev/sprites/sprite.png);
+      background-image: url(../images/sprite/sprite.png);
       background-position: -86px -272px;
       width: 18px;
       height: 11px;
@@ -808,7 +793,7 @@ The `sprites` mixin generates identical output to the CSS template
     .filter__header_link:hover:after {
       opacity: 1; }
     .filter__header_link.active_link:after {
-      background-image: url(../_dev/sprites/sprite.png);
+      background-image: url(../images/sprite/sprite.png);
       background-position: -340px -272px;
       width: 13px;
       height: 9px; }
@@ -876,7 +861,8 @@ The `sprites` mixin generates identical output to the CSS template
       display: block;
       text-align: left;
       margin: 0;
-      margin-bottom: 17px; }
+      margin-bottom: 17px;
+      max-height: 76px; }
     .products__item.medium .description__header {
       padding: 0;
       font-size: 16px;
@@ -913,6 +899,75 @@ The `sprites` mixin generates identical output to the CSS template
       position: absolute;
       bottom: 0;
       right: 0; }
+  .products__item.small {
+    display: block;
+    width: 742px;
+    margin-bottom: 0;
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+    padding: 9px 13px 8px 10px; }
+    .products__item.small:first-child {
+      border-radius: 4px 4px 0 0; }
+    .products__item.small:last-child {
+      border-radius: 0 0 4px 4px;
+      border-bottom: 1px solid #dee1e4; }
+    .products__item.small .product__image, .products__item.small .product__image__item, .products__item.small .product__image__list, .products__item.small .description__list, .products__item.small .full-description, .products__item.small .product__rating, .products__item.small .full-description {
+      display: none; }
+    .products__item.small .plu {
+      display: block; }
+    .products__item.small .product__price, .products__item.small .product__buy, .products__item.small .product__price {
+      display: inline-block; }
+    .products__item.small .desc-wrapper, .products__item.small .product__gallery, .products__item.small .buy-wrapper {
+      display: inline-block;
+      vertical-align: middle; }
+    .products__item.small .buy-wrapper {
+      vertical-align: middle; }
+    .products__item.small .plu {
+      text-align: left;
+      font-family: 'OpenSansBold';
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      color: #7f7f7f;
+      margin-top: 0;
+      max-width: 106px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .products__item.small .plu__number {
+      font-family: 'OpenSansSemibold';
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333; }
+    .products__item.small .product__gallery {
+      width: auto;
+      margin-bottom: 0; }
+    .products__item.small .description__header {
+      margin-bottom: 0;
+      width: 286px;
+      padding: 0;
+      padding-right: 7px;
+      text-align: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .products__item.small .product__price {
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 92px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .products__item.small .desc-wrapper {
+      padding: 0;
+      margin-left: 10px; }
+    .products__item.small .product__description {
+      margin-bottom: 0; }
+    .products__item.small .product__qty {
+      font-size: 12px;
+      margin-left: 18px; }
+    .products__item.small .button__buy {
+      margin-left: 19px; }
 
 .product__gallery {
   width: 136px;
@@ -977,6 +1032,7 @@ The `sprites` mixin generates identical output to the CSS template
   color: #000;
   font-size: 14px;
   font-family: 'OpenSansSemibold';
+  font-weight: normal;
   margin: 0;
   margin-bottom: 5px;
   padding-right: 8px;
@@ -1028,14 +1084,14 @@ The `sprites` mixin generates identical output to the CSS template
 
 .rating__item {
   display: inline-block;
-  background-image: url(../_dev/sprites/sprite.png);
+  background-image: url(../images/sprite/sprite.png);
   background-position: 0px -91px;
   width: 21px;
   height: 20px;
   height: 19px;
   width: 19px; }
   .rating__item.rating__item_active {
-    background-image: url(../_dev/sprites/sprite.png);
+    background-image: url(../images/sprite/sprite.png);
     background-position: 0px -272px;
     width: 16px;
     height: 15px;
@@ -1084,10 +1140,14 @@ The `sprites` mixin generates identical output to the CSS template
   .product__qty.product__qty_off:before {
     background-color: #ca1113; }
 
+.ruble {
+  font-family: 'PT Sans', sans-serif; }
+
 .button__buy {
   display: inline-block;
   margin-left: 26px;
   font-family: 'OpenSansBold';
+  font-weight: normal;
   font-size: 14px;
   color: #fff;
   width: 102px;
@@ -1124,35 +1184,41 @@ The `sprites` mixin generates identical output to the CSS template
   .view__link {
     display: inline-block; }
     .view__link.view__link_medium {
-      background-image: url(../_dev/sprites/sprite.png);
+      background-image: url(../images/sprite/sprite.png);
       background-position: -276px 0px;
       width: 16px;
-      height: 16px; }
-      .view__link.view__link_medium.view__link_active {
-        background-image: url(../_dev/sprites/sprite.png);
+      height: 16px;
+      width: 17px; }
+      .view__link.view__link_medium.view__link_active, .view__link.view__link_medium:hover {
+        background-image: url(../images/sprite/sprite.png);
         background-position: -276px -86px;
         width: 16px;
-        height: 16px; }
+        height: 16px;
+        width: 17px; }
     .view__link.view__link_large {
-      background-image: url(../_dev/sprites/sprite.png);
+      background-image: url(../images/sprite/sprite.png);
       background-position: -91px -91px;
       width: 16px;
-      height: 16px; }
-      .view__link.view__link_large.view__link_active {
-        background-image: url(../_dev/sprites/sprite.png);
+      height: 16px;
+      width: 17px; }
+      .view__link.view__link_large.view__link_active, .view__link.view__link_large:hover {
+        background-image: url(../images/sprite/sprite.png);
         background-position: -172px -181px;
         width: 16px;
-        height: 16px; }
+        height: 16px;
+        width: 17px; }
     .view__link.view__link_small {
-      background-image: url(../_dev/sprites/sprite.png);
+      background-image: url(../images/sprite/sprite.png);
       background-position: -190px -91px;
       width: 16px;
-      height: 16px; }
-      .view__link.view__link_small.view__link_active {
-        background-image: url(../_dev/sprites/sprite.png);
+      height: 16px;
+      width: 17px; }
+      .view__link.view__link_small.view__link_active, .view__link.view__link_small:hover {
+        background-image: url(../images/sprite/sprite.png);
         background-position: -86px -181px;
         width: 16px;
-        height: 16px; }
+        height: 16px;
+        width: 17px; }
 
 .sort__form {
   display: inline-block;
@@ -1207,7 +1273,6 @@ select::-ms-expand {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
   font-family: 'OpenSansBold';
   font-size: 12px;
-  color: #7f7f7f;
   text-shadow: 0 1px 0 #fff;
   text-align: center;
   line-height: 25px;
@@ -1219,7 +1284,8 @@ select::-ms-expand {
     background-color: #e0e0e0; }
 
 .page-nav__link {
-  display: block; }
+  display: block;
+  color: #7f7f7f; }
 
 .page-nav__item.page-nav__item_left, .page-nav__item.page-nav__item_right {
   font-size: 16px;
@@ -1269,5 +1335,6 @@ select::-ms-expand {
   font-family: 'OpenSansBold';
   font-size: 20px;
   line-height: 20px;
+  font-weight: normal;
   margin: 0;
   margin-bottom: 18px; }

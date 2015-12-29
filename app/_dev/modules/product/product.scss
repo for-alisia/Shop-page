@@ -47,6 +47,7 @@
 			text-align: left;
 			margin: 0;
 			margin-bottom: 17px;
+			max-height: 76px;
 		}
 		& .description__header {
 			padding: 0;
@@ -90,6 +91,90 @@
 			position: absolute;
 			bottom: 0;
 			right: 0;
+		}
+	}
+	&.small {
+		display: block;
+		width: 742px;
+		margin-bottom: 0;
+		border-radius: 0;
+		border-bottom: 1px solid transparent;
+		padding: 9px 13px 8px 10px;
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+		}
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+			border-bottom: 1px solid #dee1e4;
+		}
+		& .product__image, & .product__image__list, & .description__list, & .full-description,& .product__rating, & .full-description {
+			display: none;
+		}
+		& .plu {
+			display: block;
+		}
+		& .product__price, & .product__buy, & .product__price {
+			display: inline-block;
+		}
+		& .desc-wrapper, & .product__gallery, & .buy-wrapper {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		& .buy-wrapper {
+			vertical-align: middle;
+		}
+		& .plu {
+			text-align: left;
+			font-family: 'OpenSansBold';
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 20px;
+			color: $fontGrey;
+			margin-top: 0;
+			max-width: 106px;
+			@include text-oneline;
+		}
+		& .plu__number {
+			font-family: 'OpenSansSemibold';
+			font-size: 14px;
+			line-height: 20px;
+			color: $fontColor;
+		}
+		& .product__gallery {
+			width: auto;
+			margin-bottom: 0;
+		}
+		& .description__header {
+			margin-bottom: 0;
+			width: 286px;
+			padding: 0;
+			padding-right: 7px;
+			text-align: left;
+			
+			@include text-oneline;
+		}
+		& .product__price {
+			margin-bottom: 0;
+			vertical-align: middle;
+			width: 92px;
+			@include text-oneline;
+		}
+		& .desc-wrapper {
+			padding: 0;
+			margin-left: 10px;
+		}
+		& .product__description {
+			margin-bottom: 0;
+		}
+		& .product__qty {
+			font-size: 12px;
+			margin-left: 18px;
+		}
+		& .button__buy {
+			margin-left: 19px;
+		}
+		& .product__buy {
+			
 		}
 	}
 }
@@ -167,6 +252,7 @@
 	color: #000;
 	font-size: 14px;
 	font-family: 'OpenSansSemibold';
+	font-weight: normal;
 	margin: 0;
 	margin-bottom: 5px;
 	padding-right: 8px;
@@ -274,10 +360,14 @@
 		background-color: #ca1113;
 	}
 }
+.ruble {
+	font-family: 'PT Sans', sans-serif;
+}
 .button__buy {
 	display: inline-block;
 	margin-left: 26px;
 	font-family: 'OpenSansBold';
+	font-weight: normal;
 	font-size: 14px;
 	color: #fff;
 	width: 102px;

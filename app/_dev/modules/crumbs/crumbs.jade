@@ -3,5 +3,9 @@ block crumbs
 .crumbs
 	ul.crumbs__list
 		each item in crumbs
-			li.crumbs__item
-				a(href="#").crumbs__link=item
+			if item == 'Каталог'
+				li.crumbs__item
+					a(href="#").crumbs__link.crumbs_active=item
+			else
+				li.crumbs__item
+					a(href="#").crumbs__link=item

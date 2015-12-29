@@ -1,7 +1,9 @@
  .navigation {
-		max-width: $mainWidth;
-		margin: 0 auto;
-		padding: 0 6px;
+	max-width: $mainWidth;
+	margin: 0 auto;
+	padding: 0 6px;
+	@include text-oneline;
+	height: 54px;
 	}
 .nav__list{
 	font-size: 0;

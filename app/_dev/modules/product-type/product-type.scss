@@ -10,7 +10,7 @@
 	&:last-child {
 		border-radius: 0 0 4px 4px;
 	}
-	&.product-type__item_active {
+	&.product-type__item_active, &:hover {
 		background-color: #d9e5ea;
 	}
 }

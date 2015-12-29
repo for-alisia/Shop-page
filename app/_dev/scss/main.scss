@@ -19,23 +19,22 @@
 	float: right;
 	width: 742px;
 }
-.aside-wrapper {
-	float: left;
-	max-width: 333px;
-}
 .info-wrapper {
 	padding-top:18px;
 	padding-bottom: 18px;
 }
 .info__content {
 	text-align: justify;
+	font-size: 14px;
+	line-height: 20px;
 	column-count: 2;
 	-webkit-column-count: 2;
 	column-gap: 38px;
 	-webkit-column-gap: 38px;
+	.column {
+		padding-right: 40px;
+	}
 	p {
-		font-size: 14px;
-		line-height: 20px;
 		margin: 0;
 		margin-bottom: 21px;
 		text-indent: 38px;

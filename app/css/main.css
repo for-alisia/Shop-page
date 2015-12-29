@@ -591,7 +591,7 @@ The `sprites` mixin generates identical output to the CSS template
     border-radius: 4px 4px 0 0; }
   .product-type__item:last-child {
     border-radius: 0 0 4px 4px; }
-  .product-type__item.product-type__item_active {
+  .product-type__item.product-type__item_active, .product-type__item:hover {
     background-color: #d9e5ea; }
 
 .product-type__link {
@@ -609,7 +609,8 @@ The `sprites` mixin generates identical output to the CSS template
   margin-bottom: 40px; }
 
 .color__list {
-  margin-top: -20px; }
+  margin-top: -20px;
+  padding-top: 3px; }
 
 .color__item {
   display: inline-block;
@@ -753,6 +754,34 @@ The `sprites` mixin generates identical output to the CSS template
   margin-left: 12px;
   font-size: 14px; }
 
+.price-wrapper {
+  margin-bottom: 17px; }
+
+.ui-slider {
+  height: 3px;
+  background-color: #dee1e4;
+  position: relative;
+  margin-bottom: 18px; }
+
+.ui-slider-range {
+  height: 3px;
+  background-color: #ff6705;
+  position: absolute; }
+
+.ui-slider-handle {
+  display: block;
+  position: absolute;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -443px -336px;
+  width: 8px;
+  height: 14px;
+  margin-left: -4px;
+  outline: none; }
+
+.aside-wrapper {
+  float: left;
+  width: 333px; }
+
 .filters__list {
   background-color: #fbfbfb;
   border: 1px solid #dee1e4;
@@ -762,29 +791,35 @@ The `sprites` mixin generates identical output to the CSS template
   border-bottom: 1px solid #dee1e4;
   padding-left: 28px;
   padding-right: 21px;
+  padding-top: 12px;
   padding-bottom: 14px; }
   .filters__item:last-child {
     border-bottom: none; }
+
+.filter {
+  margin-top: 16px; }
 
 .filter__header {
   font-size: 16px;
   font-family: 'OpenSansSemibold';
   font-weight: normal;
-  margin: 0;
-  margin-bottom: 16px; }
+  margin: 0; }
   .filter__header_link {
     display: block;
     color: #333333;
     position: relative;
-    padding-top: 12px; }
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
     .filter__header_link:after {
       display: block;
       content: '';
       position: absolute;
       -webkit-transition: opacity 0.3s ease;
       transition: opacity 0.3s ease;
-      top: 17px;
-      right: -9px;
+      top: 7px;
+      right: 0px;
       background-image: url(../images/sprite/sprite.png);
       background-position: -86px -272px;
       width: 18px;
@@ -805,7 +840,8 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #dde7ec;
   border: 1px solid #dee1e4;
   margin-bottom: 20px;
-  display: block; }
+  display: block;
+  height: 53px; }
   .sort-wrapper:after {
     content: '';
     display: table;
@@ -857,6 +893,8 @@ The `sprites` mixin generates identical output to the CSS template
       text-align: left; }
     .products__item.medium .description__list {
       display: none; }
+    .products__item.medium .ellipsis {
+      display: block; }
     .products__item.medium .full-description {
       display: block;
       text-align: left;
@@ -1060,6 +1098,9 @@ The `sprites` mixin generates identical output to the CSS template
 .description_value {
   text-align: right; }
 
+.ellipsis {
+  display: none; }
+
 .full-description {
   display: none;
   font-size: 14px;
@@ -1152,6 +1193,7 @@ The `sprites` mixin generates identical output to the CSS template
   color: #fff;
   width: 102px;
   height: 33px;
+  background-color: #ff6705;
   background-image: -webkit-linear-gradient(bottom, #ff6600, #ff6e35);
   background-image: linear-gradient(to top, #ff6600, #ff6e35);
   border: none;
@@ -1159,6 +1201,37 @@ The `sprites` mixin generates identical output to the CSS template
   .button__buy:hover {
     background-image: -webkit-linear-gradient(bottom, #cc5200, #ff4902);
     background-image: linear-gradient(to top, #cc5200, #ff4902); }
+
+.ellipsis {
+  overflow: hidden;
+  height: 76px;
+  line-height: 20px; }
+
+.ellipsis:before {
+  content: "";
+  float: left;
+  width: 2px;
+  height: 76px; }
+
+.ellipsis > *:first-child {
+  float: right;
+  width: 100%;
+  margin-left: -5px; }
+
+.ellipsis:after {
+  content: "\02026";
+  float: right;
+  position: relative;
+  top: -25px;
+  left: 100%;
+  width: 3em;
+  margin-left: -3em;
+  padding-right: 5px;
+  text-align: right;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white), color-stop(50%, white));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white 50%, white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white); }
 
 .view {
   height: 50px;
@@ -1223,42 +1296,80 @@ The `sprites` mixin generates identical output to the CSS template
 .sort__form {
   display: inline-block;
   float: left;
-  margin-top: 11px; }
+  margin-top: 11px;
+  position: relative; }
   .sort__form__label {
     color: #5d656c;
-    font-size: 14px; }
-  .sort__form__select {
-    margin-left: 9px;
-    color: #7f7f7f;
     font-size: 14px;
-    font-family: 'OpenSansLight';
-    padding-left: 6px;
-    width: 140px;
-    height: 29px;
-    border-radius: 4px;
-    border: 1px solid #ebedef;
-    -webkit-appearance: none;
-    background-color: #fff;
-    box-shadow: inset 0 1px 1px #dddddd;
-    background-image: url("../images/icons/arrow-down.png");
-    background-position: 95% 53%;
-    background-repeat: no-repeat;
-    line-height: 1em;
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 2px; }
+  .sort__form__select {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9990px;
     /* for FF */
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    /* for IE */
-    -ms-appearance: none;
-    -webkit-appearance: none !important;
-       -moz-appearance: none !important;
-            appearance: none !important; }
+    /* for IE */ }
   .sort__form__option:hover {
     color: #333333;
     font-family: 'OpenSansSemibold'; }
 
 select::-ms-expand {
   display: none; }
+
+.pseudo-select {
+  display: inline-block;
+  width: 140px;
+  height: 29px;
+  border-radius: 4px;
+  border: 1px solid #ebedef;
+  margin-left: 9px;
+  color: #7f7f7f;
+  font-size: 14px;
+  font-family: 'OpenSansLight';
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 1px #dddddd;
+  background-image: url("../images/icons/arrow-down.png");
+  background-position: 95% 53%;
+  background-repeat: no-repeat;
+  cursor: pointer; }
+  .pseudo-select.active_select {
+    background-image: url("../images/icons/select-up.png"); }
+
+.pseudo-option__list {
+  position: absolute;
+  box-shadow: 0 0 5px rgba(134, 134, 134, 0.75);
+  width: 140px;
+  color: #7f7f7f;
+  font-family: 'OpenSansLight';
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 8px 5px 8px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 4px;
+  z-index: 100;
+  top: 33px;
+  left: 123px;
+  display: none; }
+
+.pseudo-option {
+  cursor: pointer;
+  margin-bottom: 10px; }
+  .pseudo-option:hover {
+    color: #333333;
+    font-family: 'OpenSansSemibold'; }
+  .pseudo-option:last-child {
+    margin-bottom: 0; }
 
 .page-nav__list {
   display: inline-block; }
@@ -1308,25 +1419,23 @@ select::-ms-expand {
   float: right;
   width: 742px; }
 
-.aside-wrapper {
-  float: left;
-  max-width: 333px; }
-
 .info-wrapper {
   padding-top: 18px;
   padding-bottom: 18px; }
 
 .info__content {
   text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
   -moz-column-count: 2;
        column-count: 2;
   -webkit-column-count: 2;
   -moz-column-gap: 38px;
        column-gap: 38px;
   -webkit-column-gap: 38px; }
+  .info__content .column {
+    padding-right: 40px; }
   .info__content p {
-    font-size: 14px;
-    line-height: 20px;
     margin: 0;
     margin-bottom: 21px;
     text-indent: 38px; }

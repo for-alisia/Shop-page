@@ -2,6 +2,7 @@
   "name": "shopPage",
   "dependencies": {
     "jquery": "1.8",
-    "normalize-css": "~3.0.3"
+    "normalize-css": "~3.0.3",
+    "jquery-ui": "~1.11.4"
   }
 }

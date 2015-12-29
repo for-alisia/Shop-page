@@ -1,5 +1,9 @@
 form(action="#").sort__form
-	label(for="sort-type").sort__form__label Сортировать по
+	label.sort__form__label Сортировать по
 	select(name="sort-type").sort__form__select
 		option(value="по цене", selected).sort__form__option по цене
 		option(value="по популярности").sort__form__option по популярности
+	span.pseudo-select по цене
+	ul.pseudo-option__list
+		li.pseudo-option по цене
+		li.pseudo-option по популярности

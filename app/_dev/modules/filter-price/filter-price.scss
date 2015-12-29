@@ -19,3 +19,25 @@
 	margin-left: 12px;
 	font-size: 14px;
 }
+.price-wrapper {
+	margin-bottom: 17px;
+}
+//slider
+.ui-slider {
+	height: 3px;
+	background-color: #dee1e4;
+	position: relative;
+	margin-bottom: 18px;
+}
+.ui-slider-range {
+	height: 3px;
+	background-color: $orange;
+	position: absolute;
+}
+.ui-slider-handle {
+	display: block;
+	position: absolute;
+	@include sprite($slider);
+	margin-left: -4px;
+	outline: none;
+}

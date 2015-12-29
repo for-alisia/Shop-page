@@ -10,4 +10,8 @@ html(lang="ru-Ru")
 		footer.footer
 			include _customs/footer.jade
 		script(src="../bower/jquery/jquery.min.js")
+		script(src="../bower/jquery-ui/jquery-ui.min.js")
+		//[if lte IE 9]>
+			<script src="vendors/jquery.columnizer.js"></script>
+			<script>$('.info__content').columnize({ columns: 2 });</script><![endif]
 		script(src="_dev/js/main.js")

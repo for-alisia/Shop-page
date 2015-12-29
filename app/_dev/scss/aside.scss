@@ -6,6 +6,10 @@
 @import "../modules/filter-brand/filter-brand.scss";
 @import "../modules/filter-price/filter-price.scss";
 
+.aside-wrapper {
+	float: left;
+	width: 333px;
+}
 .filters__list {
 	background-color: #fbfbfb;
 	border: 1px solid #dee1e4;
@@ -15,30 +19,33 @@
 	border-bottom: 1px solid #dee1e4;
 	padding-left: 28px;
 	padding-right: 21px;
+	padding-top: 12px;
 	padding-bottom: 14px;
 	&:last-child {
 		border-bottom: none;
 	}
+}
+.filter {
+	margin-top: 16px;
 }
 .filter__header {
 	font-size: 16px;
 	font-family: 'OpenSansSemibold';
 	font-weight: normal;
 	margin: 0;
-	margin-bottom: 16px;
 	&_link {
 		display: block;
 		color: #333333;
 		position: relative;
-		padding-top: 12px;
-		
+		max-width: 100%;
+		@include text-oneline;
 		&:after {
 			display: block;
 			content:'';
 			position: absolute;
 			transition: opacity 0.3s ease;
-			top: 17px;
-			right: -9px;
+			top: 7px;
+			right: 0px;
 			@include sprite($arrow-up);
 			opacity:0;
 		}

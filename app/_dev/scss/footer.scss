@@ -1,4 +1,3 @@
-@import "mixins.scss";
 @import "../modules/copyright/copyright.scss";
 .footer-wrapper {
 	max-width: $mainWidth - 5;
@@ -7,7 +6,7 @@
 	margin-bottom: 22px;
 }
 .footer-container {
-	@include clearfix;
+	clear: fix;
 }
 .logo-wrapper {
 	float: left;

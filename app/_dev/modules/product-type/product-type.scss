@@ -10,9 +10,6 @@
 	&:last-child {
 		border-radius: 0 0 4px 4px;
 	}
-	&.product-type__item_active, &:hover {
-		background-color: #d9e5ea;
-	}
 }
 .product-type__link {
 	display: block;
@@ -21,9 +18,11 @@
 	transition: all 0.2s ease;
 	&:hover {
 		color: darken(#7f7f7f, 15%);
+		background-color: #d9e5ea;
 	}
 	&.product-type__link_active {
 		color: #5d656c;
+		background-color: #d9e5ea;
 	}
 }
 .product-type {

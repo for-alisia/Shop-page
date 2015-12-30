@@ -1,5 +1,4 @@
 @import "../modules/socials/socials.scss";
-@import "mixins.scss";
 @import "../modules/contacts/contacts.scss";
 @import "../modules/logo/logo.scss";
 @import "../modules/search/search.scss";
@@ -9,10 +8,10 @@
 
 .header-contacts {
 	background-color: #fff;
-	border-bottom: #ebedef 2px solid;
+	border-bottom: $mainColor 2px solid;
 }
 .header-inner {
-	@include clearfix;
+	clear: fix;
 	padding: 26px 0;
 	max-width: $mainWidth;
 	margin: 0 auto;
@@ -42,8 +41,8 @@
 	}
 }
 .nav-wrapper {
-	background-color: #fff;
-	border-bottom: #ebedef solid 2px;
+	background-color: $white;
+	border-bottom: $mainColor solid 2px;
 	margin-bottom: 25px;
 }
 .crumbs-wrapper {

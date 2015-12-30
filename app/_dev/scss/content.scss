@@ -1,14 +1,16 @@
-@import "mixins.scss";
-
+@import "../modules/product/product.scss";
+@import "../modules/products-view/products-view.scss";
+@import "../modules/diff-sort/diff-sort.scss";
+@import "../modules/page-nav/page-nav.scss";
 
 .sort-wrapper {
 	padding-left: 19px;
 	padding-right: 2px;
 	border-radius: 4px;
-	background-color: #dde7ec;
-	border: 1px solid #dee1e4;
+	background-color: $blue;
+	border: 1px solid $borderColor;
 	margin-bottom: 20px;
-	@include clearfix;
+	clear: fix;
 	height: 53px;
 }
 .pages-wrapper {
@@ -17,4 +19,44 @@
 .products {
 	margin-left: -18px;
 	margin-bottom: 60px;
+}
+.main-wrapper, .info-wrapper {
+	max-width: $mainWidth;
+	margin: 0 auto;
+}
+.main-wrapper {
+	clear: fix;
+}
+.content-wrapper {
+	float: right;
+	width: 742px;
+}
+.info-wrapper {
+	padding-top:18px;
+	padding-bottom: 18px;
+}
+.info__content {
+	text-align: justify;
+	font-size: 14px;
+	line-height: 20px;
+	column-count: 2;
+	-webkit-column-count: 2;
+	column-gap: 38px;
+	-webkit-column-gap: 38px;
+	.column {
+		padding-right: 40px;
+	}
+	p {
+		margin: 0;
+		margin-bottom: 21px;
+		text-indent: 38px;
+	}
+}
+.info__header {
+	font-family: 'OpenSansBold';
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin: 0;
+	margin-bottom: 18px;
 }

@@ -1,5 +1,3 @@
-@import "mixins.scss";
-@import "sprite.scss";
 @import "../modules/product-type/product-type.scss";
 @import "../modules/filter-color/filter-color.scss";
 @import "../modules/filter-exist/filter-exist.scss";
@@ -11,12 +9,12 @@
 	width: 333px;
 }
 .filters__list {
-	background-color: #fbfbfb;
-	border: 1px solid #dee1e4;
+	background-color: $bgColor;
+	border: 1px solid $borderColor;
 	border-radius: 4px; 
 }
 .filters__item {
-	border-bottom: 1px solid #dee1e4;
+	border-bottom: 1px solid $borderColor;
 	padding-left: 28px;
 	padding-right: 21px;
 	padding-top: 12px;
@@ -35,7 +33,7 @@
 	margin: 0;
 	&_link {
 		display: block;
-		color: #333333;
+		color: $fontColor;
 		position: relative;
 		max-width: 100%;
 		@include text-oneline;

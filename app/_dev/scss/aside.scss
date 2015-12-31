@@ -24,19 +24,19 @@
 	}
 }
 .filter {
-	margin-top: 16px;
+	// margin-top: 16px;
 }
 .filter__header {
 	font-size: 16px;
 	font-family: 'OpenSansSemibold';
 	font-weight: normal;
 	margin: 0;
+	margin-bottom: 16px;
 	&_link {
 		display: block;
 		color: $fontColor;
 		position: relative;
 		max-width: 100%;
-		@include text-oneline;
 		&:after {
 			display: block;
 			content:'';

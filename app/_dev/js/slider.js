@@ -6,9 +6,11 @@
 		inputFrom = form.find('#from'),
 		inputTo = form.find('#to'),
 		minVal = 1000,
-		maxVal = 50000;
+		maxVal = 50000,
+		startMin = inputFrom.attr('data-min'),
+		startMax = inputTo.attr('data-max');
 	slide.slider({range: true,
-				  values: [5000,25000],
+				  values: [startMin,startMax],
 				  min: minVal,
 				  max: maxVal,
 				  change: changeValues,

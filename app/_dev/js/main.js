@@ -19,7 +19,7 @@ var shop = (function(){
 			element = $(this);
 			if (element.hasClass('view__link_medium')) {
 				productsList.removeClass('small')
-						.addClass('medium');
+							.addClass('medium');
 			} else if (element.hasClass('view__link_large')) {
 				productsList.removeClass('medium')
 							.removeClass('small');
@@ -38,10 +38,10 @@ var shop = (function(){
 				header = element.closest('.filter__header'),
 				filter = header.siblings('.filter');
 			if (filter.hasClass('closed')) {
-				filter.removeClass('closed').slideDown(300);
+				filter.removeClass('closed').stop(true,true).slideDown(300);
 				element.removeClass('active_link');
 			} else {
-				filter.slideUp(300).addClass('closed');
+				filter.stop(true,true).slideUp(300).addClass('closed');
 				element.addClass('active_link');
 			}
 		}
@@ -75,10 +75,10 @@ var shop = (function(){
 			var element = $(this),
 				options = $('.pseudo-option__list');
 			if (element.hasClass('active_select')) {
-				options.slideUp();
+				options.stop(true,true).slideUp(150);
 				element.removeClass('active_select');
 			} else {
-				options.slideDown();
+				options.stop(true,true).slideDown(150);
 				element.addClass('active_select');
 			}
 		}
@@ -91,7 +91,7 @@ var shop = (function(){
 	    		select = form.find('.pseudo-select'),
 	    		options = $('.pseudo-option__list');
 			select.text(optionText);
-			options.slideUp();
+			options.stop(true,true).slideUp();
 			$('.pseudo-select').removeClass('active_select');
 		}
 

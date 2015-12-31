@@ -10,7 +10,8 @@
 	padding-bottom: 18px;
 	margin-left: 17px;
 	margin-bottom: 18px;
-	transition: all 0.2s ease;
+	position: relative;
+	vertical-align: top;
 	&:hover {
 		box-shadow: 0 0 8px rgba(#999999, 0.45);
 	}
@@ -50,7 +51,6 @@
 			text-align: left;
 			margin: 0;
 			margin-bottom: 17px;
-			max-height: 76px;
 		}
 		& .description__header {
 			padding: 0;
@@ -61,7 +61,6 @@
 		& .desc-wrapper {
 			display: inline-block;
 			max-width: 407px;
-			height: 210px;
 			border-right: 1px solid #dee1e4;
 			vertical-align: top;
 			padding-right: 20px;
@@ -75,8 +74,6 @@
 		& .buy-wrapper {
 			display: inline-block;
 			width: 124px;
-			height: 210px;
-			position: relative;
 		}
 		& .product__price {
 			text-align: right;
@@ -84,8 +81,8 @@
 		}
 		& .product__buy {
 			position: absolute;
-			right: 0;
-			bottom: 0;
+			right: 25px;
+			bottom: 20px;
 			text-align: right;
 			height: 55px;
 		}
@@ -135,7 +132,6 @@
 			color: $fontGrey;
 			margin-top: 0;
 			max-width: 106px;
-			@include text-oneline;
 		}
 		& .plu__number {
 			font-family: 'OpenSansSemibold';
@@ -149,18 +145,17 @@
 		}
 		& .description__header {
 			margin-bottom: 0;
-			width: 286px;
+			max-width: 285px;
+			width: 285px;
 			padding: 0;
 			padding-right: 7px;
 			text-align: left;
 			
-			@include text-oneline;
 		}
 		& .product__price {
 			margin-bottom: 0;
 			vertical-align: middle;
 			width: 92px;
-			@include text-oneline;
 		}
 		& .desc-wrapper {
 			padding: 0;
@@ -295,7 +290,6 @@
 	font-family: 'OpenSansRegular';
 	overflow: hidden;
 	text-overflow: ellipsis;
-
 }
 .product__rating {
 	clear: fix;
@@ -386,4 +380,3 @@
 		background-image: linear-gradient(to top, darken(#ff6600,10%),darken(#ff6e35, 10%));
 	}
 }
-@include multiline-ellipsis(76px, 20px, 3em);
